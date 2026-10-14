@@ -1,5 +1,6 @@
 package com.example.music_app4a
 
+import android.content.Intent
 import android.os.Bundle
 import android.widget.TextView
 import androidx.activity.enableEdgeToEdge
@@ -16,7 +17,12 @@ class MainActivity : AppCompatActivity() {
         enableEdgeToEdge()
         setContentView(R.layout.activity_main)
 
-        val TvTitulo = findViewById<TextView>(R.id.tvTitulo)
+        val tvCrearCuenta = findViewById<TextView>(R.id.tvCrearCuenta)
+
+        tvCrearCuenta.setOnClickListener {
+            val intent = Intent(this, RegisterActivity::class.java)
+            startActivity(intent)
+        }
 
 
 
