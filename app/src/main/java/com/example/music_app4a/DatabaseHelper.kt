@@ -24,7 +24,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(
 
     //METODO PARA CREAR LA BASE DE DATOS
     override fun onCreate(p0: SQLiteDatabase?) {
-        TODO("Not yet implemented")
+
         val crearTablaUsuarios = """
             CREATE TABLE $TABLE_USUARIOS (
             $COL_ID INTEGER PRIMARY KEY AUTOINCREMENT,
@@ -39,7 +39,7 @@ class DatabaseHelper(context: Context): SQLiteOpenHelper(
     }
 
     override fun onUpgrade(p0: SQLiteDatabase?, p1: Int, p2: Int) {
-        TODO("Not yet implemented")
+
         p0?.execSQL("DROP TABLE IF EXISTS $TABLE_USUARIOS")
         onCreate(p0)
 
